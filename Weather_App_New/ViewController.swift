@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     
     var networkManager = NetworkManager()
-    
     let imageBackground:UIImageView = {
        let imageBackground = UIImageView()
        imageBackground.translatesAutoresizingMaskIntoConstraints = false
@@ -80,30 +79,8 @@ class ViewController: UIViewController {
         listPressed.layer.borderColor = UIColor.black.cgColor
         return listPressed
     }()
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -113,10 +90,6 @@ class ViewController: UIViewController {
             self?.updateInterfaceWith(weather: currentWeather)
             
         }
-        
-        
-        
-        
         view.addSubview(imageBackground)
         view.addSubview(iconWeather)
         view.addSubview(temparatureGeneral)
@@ -132,13 +105,7 @@ class ViewController: UIViewController {
         setupCityNameGeneral()
         setupSearchPressed()
         setupListPressed()
-        
-        
-        
-        
-        
-        
-    }
+     }
     
     func updateInterfaceWith(weather: CurrentWeather) {
         
@@ -148,12 +115,7 @@ class ViewController: UIViewController {
             self.temperatureFeelsLike.text = weather.feelsLikeTemperatureString
             self.iconWeather.image = UIImage(systemName: weather.systemIconNameString)
         }
-    
     }
-    
-    
-    
-
     func setupImageBackground() {
         imageBackground.topAnchor.constraint(equalTo: view.topAnchor, constant: -10).isActive = true
         imageBackground.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10).isActive = true
@@ -194,7 +156,6 @@ class ViewController: UIViewController {
         searchPressed.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         searchPressed.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/12).isActive = true
         searchPressed.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1/5).isActive = true
-        
     }
     
     func setupListPressed() {
@@ -215,7 +176,5 @@ class ViewController: UIViewController {
         print("List")
     }
     
-    
-
 }
 

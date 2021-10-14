@@ -35,20 +35,10 @@ struct CurrentWeather {
         default: return "nosign"
         }
     }
-    
-    
-    
-    
     init?(currentWeatherData: CurrentWeatherData) {
         cityName = currentWeatherData.name
         temperature = currentWeatherData.main.temp
         feelsLikeTemperature = currentWeatherData.main.feelsLike
         conditionCode = currentWeatherData.weather.first!.id
     }
-    
-    
-    
-    
-    
-    
 }

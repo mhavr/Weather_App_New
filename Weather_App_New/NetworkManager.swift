@@ -11,10 +11,6 @@ import Foundation
 struct NetworkManager {
     
     var onCompletion: ((CurrentWeather) -> Void)?
-    
-    
-    
-    
     func fetchCurrentWeather(forCity city: String) {
         let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=71bab58039db2654ec8cd860bf00beb9&units=metric"
         guard let url = URL(string: urlString) else { return }
@@ -42,19 +38,5 @@ struct NetworkManager {
             print(error.localizedDescription)
         }
         return nil
-
-
-
-
-
-
-
-
-
-}
-
-
-
-    
-
-}
+    }
+ }
